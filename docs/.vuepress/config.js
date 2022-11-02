@@ -1,5 +1,10 @@
 module.exports = {
-    
+    // theme: "vdoing",
+    base: "/",
+    markdown: {
+        lineNumbers: true
+    },
+
     locales: {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -29,19 +34,20 @@ module.exports = {
                 algolia: {},
                 nav: [
                     { text: 'Home', link: '/' },
-                    { text: 'guide', link: '/guide/' },
-                    { text: 'install', link: '/install/' },
-                    { text: 'plugin', link: '/plugin/' },
+                    { text: 'Guide', link: '/guide/' },
+                    { text: 'Install', link: '/install/' },
+                    { text: 'Plugin', link: '/plugin/' },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },
 
                 ],
                 // displayAllHeaders: true,
                 sidebar: 'auto',
-               /*  sidebar: [
-                  
-                    '/guide/', '/install/', '/plugin/'
-                ] */
+                /*  sidebar: [
+                   
+                     '/guide/', '/install/', '/plugin/'
+                 ] */
+
             },
             '/zh/': {
                 selectText: '选择语言',
@@ -55,18 +61,16 @@ module.exports = {
                 },
                 algolia: {},
                 nav: [
-                    { text: '首页', link: '/' },
-                    { text: '指南', link: '/guide/' },
-                    { text: '安装', link: '/install/' },
-                    { text: '插件', link: '/plugin/' },
+                    { text: '首页', link: '/zh/' },
+                    { text: '指南', link: '/zh/guide/' },
+                    { text: '安装', link: '/zh/install/' },
+                    { text: '插件', link: '/zh/plugin/' },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },
                 ],
                 // displayAllHeaders: true,
                 sidebar: 'auto'
-                /* sidebar: [
-                    '/guide/', '/install/', '/plugin/'
-                ] */
+
 
             }
 
