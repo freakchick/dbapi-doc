@@ -1,6 +1,7 @@
 module.exports = {
     // theme: "vdoing",
     base: "/dbapi-doc/",
+    dest:"dist",
     // markdown: {
     //     lineNumbers: true
     // },
