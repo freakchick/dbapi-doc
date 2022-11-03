@@ -1,9 +1,23 @@
 module.exports = {
     // theme: "vdoing",
-    base: "/",
+    // base: "/",
     markdown: {
         lineNumbers: true
     },
+    head: [
+        [
+          'script', {}, `
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?a8fb326da5bdf70aa80eb56b11f97e0f";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+                
+          `
+        ]
+      ],
 
     locales: {
         // 键名是该语言所属的子路径
