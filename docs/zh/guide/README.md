@@ -20,7 +20,8 @@
 - 支持`application/json`和`application/x-www-form-urlencoded`
 - 支持接口调用记录查询，接口访问信息统计
 
-
+## 视频教程
+[视频教程](https://www.bilibili.com/video/BV1zL411G7Qh)
 
 ## 基本操作
 
@@ -163,6 +164,11 @@ print(re.text)
 > 同时DBAPI也自带了消费kafka日志并写入日志数据库的工具，请使用XXX脚本。
 
 - 如果您不需要使用监控功能，可以不用搭建日志数据库，并配置`access.log.writer=null`即可。
+
+## springboot集成
+
+- 如果您想更加灵活的使用DBApi，在您自己的java springboot项目中使用代码配置接口，
+请使用[dbApi-spring-boot-starter开源框架](https://gitee.com/freakchicken/dbApi-spring-boot-starter)
 
 
 ## 注意事项

@@ -36,3 +36,5 @@ Apache-2.0 Licensed | Copyright © 2022-present [鄂ICP备2022017357号](https:/
 ![](https://img.shields.io/github/forks/freakchick/DBApi.svg?logo=GitHub)
 ![](https://img.shields.io/github/watchers/freakchick/DBApi.svg?logo=GitHub)
 ![](https://img.shields.io/github/license/freakchick/DBApi.svg)
+
+[Github代码托管](https://github.com/freakchick/DBApi)   [Gitee代码托管](https://gitee.com/freakchicken/db-api)

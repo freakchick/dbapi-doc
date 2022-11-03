@@ -1,6 +1,6 @@
 # 安装教程
 
-> 安装包[下载地址](http://www.51dbapi.com/) ，或者在[网盘](https://cloud.189.cn/t/Jza2MzeEZVNv) 下载。默认账户admin/admin。
+> 安装包[下载地址](https://cloud.189.cn/t/Jza2MzeEZVNv) 下载。默认账户admin/admin。
 
 > 为了便于您理解安装的时候需要配置的参数和docker环境变量，请您先学习[日志监控](../guide/README.md#监控)相关的功能设计
 

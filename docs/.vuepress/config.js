@@ -1,13 +1,13 @@
 module.exports = {
     // theme: "vdoing",
     base: "/",
-    dest:"dist",
+    dest: "dist",
     // markdown: {
     //     lineNumbers: true
     // },
     head: [
         [
-          'script', {}, `
+            'script', {}, `
           var _hmt = _hmt || [];
           (function() {
             var hm = document.createElement("script");
@@ -18,7 +18,7 @@ module.exports = {
                 
           `
         ]
-      ],
+    ],
 
     locales: {
         // 键名是该语言所属的子路径
@@ -50,9 +50,11 @@ module.exports = {
                 nav: [
                     { text: 'Home', link: '/' },
                     { text: 'Guide', link: '/guide/' },
-                    { text: 'Install', link: '/install/' },
+                    { text: 'Installment', link: '/install/' },
                     { text: 'Plugin', link: '/plugin/' },
-                    { text: "💖Sponsor", link: "/donate/" },
+                    { text: "Question", link: "/question/" },
+                    { text: "Contact", link: "/contact/" },
+                    { text: "💖Sponsorship", link: "/donate/" },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },
 
@@ -81,6 +83,8 @@ module.exports = {
                     { text: '指南', link: '/zh/guide/' },
                     { text: '安装', link: '/zh/install/' },
                     { text: '插件', link: '/zh/plugin/' },
+                    { text: "问答", link: "/zh/question/" },
+                    { text: "联系", link: "/zh/contact/" },
                     { text: "💖支持", link: "/zh/donate/" },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },

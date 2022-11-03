@@ -1,23 +1,8 @@
 # 安装教程
 
-> 安装包[下载地址](http://www.51dbapi.com/) ，或者在[网盘](https://cloud.189.cn/t/Jza2MzeEZVNv) 下载。
+> 安装包[下载地址](https://cloud.189.cn/t/Jza2MzeEZVNv) 下载。默认账户admin/admin。
 
-> 默认账户admin/admin
-
-## 前言
-> 为了便于您理解安装的时候需要配置的参数，请您先学习日志监控相关的功能设计
-
-- DBAPI只依赖元数据库（mysql/sqlite）就可以使用，但是如果您还需要使用页面上的监控功能（监控API调用记录、访问量、成功率等等），
-就必须依赖于另一个日志数据库（需用户自行搭建），来存储API访问日志，推荐使用clickhouse，当然您也可以使用其它的关系型数据库。
-
-- API访问日志采集进入日志数据库有3种方式
-1. 如果在`conf/application.properties`文件配置了`access.log.writer=db`，那么DBAPI会将API访问日志直接写入日志数据库，这种方式会直连日志数据库，适用于日志量不太大的场景下。
-2. 如果在`conf/application.properties`文件配置了`access.log.writer=kafka`，那么DBAPI会将API访问日志写入kafka，
-用户需要自行从kafka采集日志到日志数据库，这种方式适用于日志量大的场景，可以由kafka去做数据缓冲。
-> 同时DBAPI也自带了消费kafka日志并写入日志数据库的工具，请使用`bin/log-kafka2db.sh`脚本。
-3. DBAPI默认会将API访问日志写入磁盘文件`logs/dbapi-access.log`，用户可以自行使用`datax` `flume`等工具采集日志到日志数据库。此情况下需要配置`access.log.writer=null`
-
-- 如果您不需要使用监控功能，可以不用搭建日志数据库，并配置`access.log.writer=null`即可。
+> 为了便于您理解安装的时候需要配置的参数和docker环境变量，请您先学习[日志监控](../guide/README.md#监控)相关的功能设计
 
 ## 本地部署单机版
 
@@ -176,9 +161,9 @@ sh bin/dbapi-daemon.sh stop apiServer
 
 ## docker部署单机版
 
-> 建议先阅读此文档前面本地安装部分，便于理解docker每个环境变量的含义，理解启动的时候是否需要配置相应的环境变量
+> 建议先阅读[日志监控](../guide/README.md#监控)，便于理解docker每个环境变量的含义，理解启动的时候是否需要配置相应的环境变量
 
-> Docker 容器通过环境变量进行配置，附录-环境变量列出了 `DBApi` 的可配置环境变量及其默认值
+> Docker 容器通过环境变量进行配置，[附录-环境变量](./README.md#环境变量)列出了 `DBApi` 的可配置环境变量及其默认值
 
 - 一键启动（使用dbapi自带的元数据库sqlite，且不能使用日志监控功能）
 ```shell
@@ -235,9 +220,9 @@ freakchicken/db-api:3.2.0 standalone
 
 ## docker部署集群版
 
-> 建议先阅读此文档前面本地安装部分，便于理解docker每个环境变量的含义，理解启动的时候是否需要配置相应的环境变量
+> 建议先阅读[日志监控](../guide/README.md#监控)，便于理解docker每个环境变量的含义，理解启动的时候是否需要配置相应的环境变量
 
-> Docker 容器通过环境变量进行配置，附录-环境变量 列出了 `DBApi` 的可配置环境变量及其默认值
+> Docker 容器通过环境变量进行配置，[附录-环境变量](./README.md#环境变量)列出了 `DBApi` 的可配置环境变量及其默认值
 
 - 集群部署依赖`nacos`、`mysql`、`redis`，请先自行安装`nacos`（推荐1.4.2版本）、`mysql`、`redis`
 - 在mysql创建新的数据库，执行数据库初始化脚本（下载安装包解压获取`sql/ddl_mysql.sql`脚本）
@@ -284,7 +269,8 @@ docker run -it \
 freakchicken/db-api:3.2.0 gateway
 ```
 
-### 启动API服务apiServer（此服务可启动多个，构建api集群）
+### 启动API服务apiServer
+> 此服务可启动多个，构建api集群
 
 - API访问日志直接写入日志数据库方式
 ```shell
