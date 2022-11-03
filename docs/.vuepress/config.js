@@ -1,9 +1,9 @@
 module.exports = {
     // theme: "vdoing",
     // base: "/",
-    markdown: {
-        lineNumbers: true
-    },
+    // markdown: {
+    //     lineNumbers: true
+    // },
     head: [
         [
           'script', {}, `
