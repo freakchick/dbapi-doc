@@ -1,6 +1,6 @@
 module.exports = {
     // theme: "vdoing",
-    base: "/dbapi-doc/",
+    base: "/",
     dest:"dist",
     // markdown: {
     //     lineNumbers: true
@@ -52,6 +52,7 @@ module.exports = {
                     { text: 'Guide', link: '/guide/' },
                     { text: 'Install', link: '/install/' },
                     { text: 'Plugin', link: '/plugin/' },
+                    { text: "💖Sponsor", link: "/donate/" },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },
 
@@ -80,6 +81,7 @@ module.exports = {
                     { text: '指南', link: '/zh/guide/' },
                     { text: '安装', link: '/zh/install/' },
                     { text: '插件', link: '/zh/plugin/' },
+                    { text: "💖支持", link: "/zh/donate/" },
                     { text: 'Gitee', link: 'https://gitee.com/freakchicken/db-api' },
                     { text: 'Github', link: 'https://github.com/freakchick/DBApi' },
                 ],
